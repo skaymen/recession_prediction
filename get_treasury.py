@@ -8,12 +8,11 @@ def get_yields(url):
     # Get HTML from site.
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')
-    table = soup.find_all('table')
-    for t in table:
-        print(t)
-        class_name = t.get("class")
-        if (class_name == "t-chart"):
-            print(t)
+    for row in soup.find_all('tr'):
+        if (row.get("class") == ["oddrow"] or row.get("class") == ["evenrow"]):
+            for item in row:
+                for i in item:
+                    print(i)
 
 
 
