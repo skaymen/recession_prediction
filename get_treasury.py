@@ -10,11 +10,12 @@ url = url_prefix + year
 
 
 
-def get_yields(url):
+def get_yields():
     # Get HTML from site.
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')
     data = []
+
     for row in soup.find_all('tr'):
         if (row.get("class") == ["oddrow"] or row.get("class") == ["evenrow"]):
             for item in row:
@@ -33,6 +34,4 @@ def get_yields(url):
 
 
 
-get_yields(url)
-
-#testing for github
+get_yields()
