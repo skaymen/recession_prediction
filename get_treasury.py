@@ -8,8 +8,6 @@ url_prefix = c.TREASURY_URL_PREFIX
 year = "20" + date[6:]
 url = url_prefix + year
 
-
-
 def get_yields():
     # Get HTML from site.
     r = requests.get(url)
@@ -32,4 +30,3 @@ def get_yields():
     return return_data
 
 
-get_yields()

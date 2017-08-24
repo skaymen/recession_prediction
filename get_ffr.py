@@ -25,7 +25,3 @@ def get_effr():
                 break
 
     return effr
-
-
-
-get_effr()
