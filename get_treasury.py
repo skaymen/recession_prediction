@@ -1,14 +1,12 @@
-import config as c
-
 from bs4 import BeautifulSoup
 import requests
 
-date = c.TREASURY_DATE
-url_prefix = c.TREASURY_URL_PREFIX
-year = "20" + date[6:]
-url = url_prefix + year
 
-def get_yields():
+def get_yields(date, url_prefix):
+
+    year = "20" + date[6:]
+    url = url_prefix + year
+
     # Get HTML from site.
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')

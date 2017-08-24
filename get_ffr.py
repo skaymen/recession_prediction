@@ -3,10 +3,8 @@ import config as c
 from bs4 import BeautifulSoup
 import requests
 
-date = c.FFR_DATE
-url = c.FFR_URL
 
-def get_effr():
+def get_effr(date, url):
     # Get HTML from site.
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')
