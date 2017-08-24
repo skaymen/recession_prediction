@@ -17,32 +17,15 @@ def get_effr():
             for row in table:
                 for x in row:
                     data.append(x)
-                # for index, elem in enumerate(row):
-                #     if date in str(elem):
-                #         print(row[index + 1])
 
     for index, elem in enumerate(data):
         if date in str(elem):
-            print(data)
-            print(str(data[index + 1]))
-    #     print("x" + str(i).replace(" ", ""))
-    #     if date in str(elem):
-    #         for x in elem:
-    #             print(x)
-            # print(elem)
-            # print(str(data[index + 1]) + "x")
+            for x in data[index + 2]:
+                effr = float(str(x).strip())
+                break
 
-                    # data.append(str(i).replace(" ", ""))
+    return effr
 
-
-    # for td in soup.find_all('td'):
-    #     # print td.get("class")
-    #     if (td.get("class") == ["dirColTight", "numData"]):
-    #         for item in td:
-    #             for i in item:
-    #                 data.append(i)
-    #
-    # print(data)
 
 
 get_effr()

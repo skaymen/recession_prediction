@@ -22,16 +22,14 @@ def get_yields():
                 for i in item:
                     data.append(i)
 
+    return_data = {}
     for index, elem in enumerate(data):
         if (elem == date):
-            three_month = data[index + 2]
-            ten_year = data[index + 9]
-
-    print(three_month)
-    print(ten_year)
+            return_data["three_month"] = data[index + 2]
+            return_data["ten_year"] = data[index + 9]
 
 
-
+    return return_data
 
 
 get_yields()
