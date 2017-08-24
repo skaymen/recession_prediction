@@ -9,4 +9,3 @@ date = datetime.date.today().strftime('%m/%d/%y')
 
 yields = get_yields(date, c.TREASURY_URL_PREFIX)
 effr = get_effr(date, c.FFR_URL)
-
