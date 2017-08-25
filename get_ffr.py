@@ -22,7 +22,4 @@ def get_effr(date, url):
                 effr = float(str(x).strip())
                 break
 
-        else:
-            effr = 0
-
     return effr
