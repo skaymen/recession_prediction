@@ -18,13 +18,15 @@ def get_yields(date, url_prefix):
                 for i in item:
                     data.append(i)
 
-    return_data = {}
+#   return_data = {}
+    spread = 0
+
     for index, elem in enumerate(data):
         if (elem == date):
-            return_data["three_month"] = data[index + 2]
-            return_data["ten_year"] = data[index + 9]
+            spread = float(data[index + 9]) - float(data[index + 2])
+#            return_data["three_month"] = data[index + 2]
+#            return_data["ten_year"] = data[index + 9]
 
-
-    return return_data
+    return spread
 
 
