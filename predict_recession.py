@@ -13,11 +13,13 @@ def predict_recession_main():
     yields = get_yields(date, c.TREASURY_URL_PREFIX)
     effr = get_effr(date[0:5], c.FFR_URL)
     stddev = c.MATH_CONSTANT_A + (c.MATH_CONSTANT_B * yields) + (c.MATH_CONSTANT_C * effr)
-    #FIXME Fairly sure this accurately calculates the probit, but it doesn't match the excel document.
+#   FIXME Fairly sure this accurately calculates the probit, but it doesn't match the excel document. I'll talk to John
     probit = (1.0 + erf(stddev / sqrt(2.0)))/2.0
 #   print(probit)
 
     msg = 'fuck you Stanley. Probit: ' + str(probit)
+    print(msg)
+#   FIXME: It won't email anything... even though the msg is print in the line above.
     send_email(msg)
 
 predict_recession_main()
