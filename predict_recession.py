@@ -15,10 +15,10 @@ def predict_recession_main():
     stddev = c.MATH_CONSTANT_A - (c.MATH_CONSTANT_B * yields) + (c.MATH_CONSTANT_C * effr)
     probit = (1.0 + erf(stddev / sqrt(2.0)))/2.0
 
-    msg = 'fuck you Stanley. Probit: ' + str(probit)
+    msg = '\nfuck you Stanley. Probit: ' + str(probit)
     print(msg)
-#    FIXME: It won't email anything... even though the msg is printing in the line above.
-#    send_email(msg)
+   # FIXME: It won't email anything... even though the msg is printing in the line above.
+    send_email(msg)
 
 predict_recession_main()
 
