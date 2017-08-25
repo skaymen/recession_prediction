@@ -10,12 +10,14 @@ def get_effr(date, url):
     soup = BeautifulSoup(r.text, 'html.parser')
     data = []
 
+    #Grab all data inside the table
     for table in soup.find_all('table'):
         if table.get("id") == "TBLDetails":
             for row in table:
                 for x in row:
                     data.append(x)
 
+    #Find the ffr using the date given
     for index, elem in enumerate(data):
         if date in str(elem):
             for x in data[index + 2]:
