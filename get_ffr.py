@@ -18,6 +18,7 @@ def get_effr(date, url):
                 for x in row:
                     data.append(x)
 
+    effr = -1
     # Find the ffr using the date given
     for index, elem in enumerate(data):
         if date in str(elem):

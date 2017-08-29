@@ -1,0 +1,19 @@
+-------   High Priority   -------
+
+#correct date generation
+
+make script run automatically
+
+find place to host script
+
+make script run more often during high probit period
+    and add "high priority" to email
+
+data visualization
+
+create email list to send to
+
+--------   Low Priority   -------
+
+format email correctly
+

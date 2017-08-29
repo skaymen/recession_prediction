@@ -19,12 +19,14 @@ def get_yields(date, url_prefix):
                 for i in item:
                     data.append(i)
 
-    # Find the spread for the given date
-    spread = 0
+    # Return the two yield figures as a dictionary
+    yields = {}
+
     for index, elem in enumerate(data):
         if (elem == date):
-            spread = float(data[index + 9]) - float(data[index + 2])
+            yields['3_month'] = float(data[index + 2])
+            yields['10_year'] = float(data[index + 9])
 
-    return spread
+    return yields
 
 
